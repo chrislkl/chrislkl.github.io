@@ -3,7 +3,7 @@ import './App.css';
 import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Add this import
 import { useState } from 'react';
-//import testImage from './minecraft.jpg';
+import Header from './Header';
 import BakingPage from './BakingPage';
 import './BakingPage.css'; 
 
@@ -97,32 +97,32 @@ function App() {
     <Router>
       <div className="App">
         <div className="App-header">
-        <Routes>
-          <Route path="/" element={
-            <>
-              <div className="text-container">
-                {text.split('\n').map((line, index) => (
-                  <p key={index}>
-                    {renderTextWithHover(line)}
-                    <br />
-                  </p>
-                ))}
-                <div className="footer-bar">
-                  <a href="mailto:christopher.lew916@gmail.com">Email</a>
-                  <Link to="/read">Read.cv</Link>
-                  <Link to="/blogothy">Blogothy</Link>
-                  <Link to="/baking">Baking</Link>
+          <Routes>
+            <Route path="/" element={
+              <>
+                <div className="text-container">
+                  {text.split('\n').map((line, index) => (
+                    <p key={index}>
+                      {renderTextWithHover(line)}
+                      <br />
+                    </p>
+                  ))}
+                  <div className="footer-bar">
+                    <a href="mailto:christopher.lew916@gmail.com">Email</a>
+                    <a href="https://read.cv/chrislew" target="_blank">Read.cv</a>
+                    <Link to="/blogothy">Blogothy</Link>
+                    <Link to="/baking">Baking</Link>
+                  </div>
                 </div>
-              </div>
-              <div className="image-container">
-                {showImage && images[hoveredWord] && (
-                  <img src={images[hoveredWord]} alt={hoveredWord} />
-                )}
-              </div>
-            </>
-          } />
-          <Route path="/baking" element={<BakingPage />} />
-        </Routes>
+                <div className="image-container">
+                  {showImage && images[hoveredWord] && (
+                    <img src={images[hoveredWord]} alt={hoveredWord} />
+                  )}
+                </div>
+              </>
+            } />
+            <Route path="/baking" element={<BakingPage />} />
+          </Routes>
         </div>
       </div>
     </Router>
