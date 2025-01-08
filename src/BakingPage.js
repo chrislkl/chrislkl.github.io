@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 import './BakingPage.css'; // Create a separate CSS file for styling the gallery
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
-import ImageLayout from 'react-image-layout';
 
 
 
 
 const importAll = (r) => r.keys().map(r);
-const images = importAll(require.context('../public/images/baking', false, /\.(png|jpe?g|svg|JPG)$/));
+const images = importAll(require.context('./images/baking', false, /\.(png|jpe?g|svg|JPG)$/));
 
 
 const BakingPage = () => {

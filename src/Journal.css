@@ -1,0 +1,59 @@
+
+.journal-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    padding-left: 10%;
+    padding-top: 10%;
+    /*height: 100vh; /* Make it stretch the full viewport height */
+    position: fixed; /* Keep it fixed on the left */
+    width: 1000px;
+    left: 0;
+    top: 0;
+}
+
+.journal-titles {
+    margin: 0;
+    padding-left: 7%;
+}
+
+.journal-link {
+    background: none;
+    cursor: pointer;
+    border: none;
+    display: block;
+    margin: 10px 0;
+    transition: border-color 0.3s;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+    padding-bottom: 5px;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+.journal-link:hover {
+    color: #d0d0d0; /* Darker text color on hover */
+}
+
+.main-content {
+    margin-left: 320px; /* Leave space for the fixed journal container */
+    padding: 20px;
+}
+
+.return-button {
+    margin: 10px;
+}
+
+.return-button a {
+  text-decoration: none;
+  color: white; /* Or any color you prefer */
+}
+
+.return-button a:hover {
+  color: #d0d0d0; /* Hover color */
+}
+
+.return-button .fa-arrow-left {
+  font-size: 24px; /* Adjust size as needed */
+}
+  

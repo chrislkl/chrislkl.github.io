@@ -1,3 +1,5 @@
+
+
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -20,18 +22,18 @@
 
 .return-button {
     margin: 10px;
-  }
-  
-  .return-button a {
-    text-decoration: none;
-    color: white; /* Or any color you prefer */
-  }
-  
-  .return-button a:hover {
-    color: #d0d0d0; /* Hover color */
-  }
-  
-  .return-button .fa-arrow-left {
-    font-size: 24px; /* Adjust size as needed */
-  }
+}
+
+.return-button a {
+  text-decoration: none;
+  color: white; /* Or any color you prefer */
+}
+
+.return-button a:hover {
+  color: #d0d0d0; /* Hover color */
+}
+
+.return-button .fa-arrow-left {
+  font-size: 24px; /* Adjust size as needed */
+}
   

@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Ad
 import { useState } from 'react';
 import Header from './Header';
 import BakingPage from './BakingPage';
+import Journal from './Journal';
 import './BakingPage.css'; 
+import './Journal.css';
 
 
 function App() {
@@ -110,7 +112,7 @@ function App() {
                   <div className="footer-bar">
                     <a href="mailto:christopher.lew916@gmail.com">Email</a>
                     <a href="https://read.cv/chrislew" target="_blank">Read.cv</a>
-                    <Link to="/blogothy">Blogothy</Link>
+                    <Link to="/journal">Things I've Learned</Link>
                     <Link to="/baking">Baking</Link>
                   </div>
                 </div>
@@ -122,6 +124,7 @@ function App() {
               </>
             } />
             <Route path="/baking" element={<BakingPage />} />
+            <Route path="/journal" element={<Journal />} />
           </Routes>
         </div>
       </div>
