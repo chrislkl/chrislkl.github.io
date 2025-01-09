@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/chrislkl.github.io/static/css/main.2e722dec.css",
-    "main.js": "/chrislkl.github.io/static/js/main.ab829a94.js",
+    "main.js": "/chrislkl.github.io/static/js/main.b52d9f82.js",
     "static/js/453.1d16003e.chunk.js": "/chrislkl.github.io/static/js/453.1d16003e.chunk.js",
     "static/media/IMG_9292.jpg": "/chrislkl.github.io/static/media/IMG_9292.a0d93c8af3d300f54ac5.jpg",
     "static/media/IMG_9118.jpg": "/chrislkl.github.io/static/media/IMG_9118.d4cd9b537be9188fd8b3.jpg",
@@ -20,11 +20,11 @@
     "static/media/3.txt": "/chrislkl.github.io/static/media/3.50949782917fd8d18e40.txt",
     "static/media/2.txt": "/chrislkl.github.io/static/media/2.3ad844cf098317299020.txt",
     "main.2e722dec.css.map": "/chrislkl.github.io/static/css/main.2e722dec.css.map",
-    "main.ab829a94.js.map": "/chrislkl.github.io/static/js/main.ab829a94.js.map",
+    "main.b52d9f82.js.map": "/chrislkl.github.io/static/js/main.b52d9f82.js.map",
     "453.1d16003e.chunk.js.map": "/chrislkl.github.io/static/js/453.1d16003e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2e722dec.css",
-    "static/js/main.ab829a94.js"
+    "static/js/main.b52d9f82.js"
   ]
 }
