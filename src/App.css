@@ -31,38 +31,38 @@
 }
 
 .italic-word:hover {
-  color: #d0d0d0; /* Darker text color on hover */
+  color: #d0d0d0; 
 }
 
 .image-container {
-  flex-shrink: 0; /* Prevent the image from shrinking */
+  flex-shrink: 0; 
   width: 45%;
   display: flex;
-  align-items: center; /* Center the image vertically */
-  justify-content: center; /* Center the image horizontally */
+  align-items: center; 
+  justify-content: center; 
 }
 
 .image-container img {
-  max-width: 100%; /* Ensure the image scales correctly */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+  height: auto; 
 }
 
 .footer-bar {
-  position: relative; /* Position at the bottom of the text container */
+  position: relative;
   bottom: 0;
   left: 0;
   width: 50%;
   display: flex;
-  justify-content: space-around; /* Space out the links evenly */
-  box-sizing: border-box; /* Include padding in width calculation */
+  justify-content: space-around; 
+  box-sizing: border-box; 
 }
 
 .footer-bar a {
-  color: rgba(255, 255, 255, 0.514); /* Link color */
-  text-decoration: none; /* Remove underline from links */
-  font-size: calc(5px + 1vmin); /* Adjust font size */
+  color: rgba(255, 255, 255, 0.514); 
+  text-decoration: none; 
+  font-size: calc(5px + 1vmin); 
 }
 
 .footer-bar a:hover {
-  text-decoration: underline; /* Add underline on hover */
+  text-decoration: underline; 
 }

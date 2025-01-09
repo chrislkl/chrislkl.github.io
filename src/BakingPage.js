@@ -7,8 +7,20 @@ import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const importAll = (r) => r.keys().map(r);
-const images = importAll(require.context('./images/baking', false, /\.(png|jpe?g|svg|JPG)$/));
+const images = [
+  `${process.env.PUBLIC_URL}/baking/image1.jpg`,
+  `${process.env.PUBLIC_URL}/baking/image2.jpg`,
+  `${process.env.PUBLIC_URL}/baking/image3.JPG`,
+  `${process.env.PUBLIC_URL}/baking/image4.jpg`,
+  `${process.env.PUBLIC_URL}/baking/image5.jpg`,
+  `${process.env.PUBLIC_URL}/baking/image6.JPG`,
+  `${process.env.PUBLIC_URL}/baking/image7.jpg`,
+  `${process.env.PUBLIC_URL}/baking/image8.jpg`,
+  `${process.env.PUBLIC_URL}/baking/image9.jpg`,
+  `${process.env.PUBLIC_URL}/baking/image10.jpg`,
+  `${process.env.PUBLIC_URL}/baking/image11.JPG`,
+  `${process.env.PUBLIC_URL}/baking/image12.jpg`,
+];
 
 
 const BakingPage = () => {

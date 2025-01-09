@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
 import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Add this import
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import { useState } from 'react';
-import Header from './Header';
 import BakingPage from './BakingPage';
 import Journal from './Journal';
 import './BakingPage.css'; 
@@ -13,8 +12,8 @@ import './Journal.css';
 function App() {
   const [hoveredWord, setHoveredWord] = useState(null);
   const [showImage, setShowImage] = useState(false);
-  const [timeoutId, setTimeoutId] = useState(null); // Store timeout ID
-  const text = 'Chris is a software developer and baking enthusiast.\nHe loves playing Minecraft and dabbing on his haters. Sometimes he walks in parks and talks to the local geese.';
+  const [timeoutId, setTimeoutId] = useState(null); 
+  const text = 'Chris is a software developer and baking enthusiast.\nHe loves to read books on theology and enjoys solving puzzles. Sometimes he walks in parks and talks to the local geese.';
   
   const images = {
     Minecraft: '/root/chris-lew-website/src/test.jpg'
@@ -22,8 +21,8 @@ function App() {
 
   const hoverablePhrases = {
     'Chris': 'test',
-    'Minecraft': 'test',
-    'dabbing': 'test'
+    'theology': 'test',
+    'puzzles.': 'test'
   };
 
   const handleMouseEnter = (word) => {
@@ -34,7 +33,7 @@ function App() {
 
     const id = setTimeout(() => {
       setShowImage(true); // Show image after delay
-    }, 5000); // 500 ms delay (change as needed)
+    }, 5000); 
     setTimeoutId(id);
   };
 
@@ -42,7 +41,6 @@ function App() {
     setShowImage(false);
     setHoveredWord(null);
     
-    // Clear any existing timeout when leaving
     if (timeoutId) {
       clearTimeout(timeoutId);
     }
@@ -69,7 +67,7 @@ function App() {
             {twoWordsPhrase}
           </span>
         );
-        i += 2; // Skip the next word as it's part of the current phrase
+        i += 2; 
       } else if (hoverablePhrases[currentWord]) {
         elements.push(
           <span
@@ -88,7 +86,7 @@ function App() {
       }
 
       if (i < words.length) {
-        elements.push(' '); // Add space between words
+        elements.push(' '); 
       }
     }
 
