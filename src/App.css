@@ -4,12 +4,12 @@
 
 .App-header {
   background-color: #1a2b4a;
-  min-height: 100vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 15%;
+  padding-top: 5vh;
   padding-left: 6%;
   font-size: calc(20px + 2vmin);
   color: white;
@@ -17,13 +17,16 @@
 }
 
 .intro-section {
+  min-height: 80vh;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  padding: 2rem;
+  padding-top: 20vh;
+  padding-right: 6%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .text-container {
