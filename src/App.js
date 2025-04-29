@@ -7,31 +7,30 @@ import BakingPage from './BakingPage';
 import Journal from './Journal';
 import './BakingPage.css'; 
 import './Journal.css';
-import Header from './Header';
 
 
 function App() {
   const [hoveredWord, setHoveredWord] = useState(null);
   const [showImage, setShowImage] = useState(false);
   const [timeoutId, setTimeoutId] = useState(null); 
-  const text = 'Chris is a software developer and baking enthusiast.\nHe has built solutions as OMERS and Imagine Communications. He also loves to read books on theology and enjoys solving puzzles.';
+  const text = 'Chris is a software developer and baking enthusiast.\nHe has built solutions at OMERS and Imagine Communications. He also loves to read books on theology and enjoys solving puzzles.';
   
   const images = {
     Chris: process.env.PUBLIC_URL + 'images/chris_eating.JPG',
-    OMERS: process.env.PUBLIC_URL + '/dab-emoji.png',
-    'Imagine Communications.': process.env.PUBLIC_URL + '/dab-emoji.png',
-    'puzzles.': process.env.PUBLIC_URL + '/dab-emoji.png'
+    OMERS: process.env.PUBLIC_URL + 'images/OMERS.JPG',
+    'Imagine Communications.': process.env.PUBLIC_URL + 'images/Imagine.jpg',
+    'puzzles.': process.env.PUBLIC_URL + 'images/puzzle.jpg'
   };
 
   const hoverablePhrases = {
-    'Chris': 'test',
-    'OMERS': 'test',
-    'Imagine Communications.': 'test',
-    'puzzles.': 'test'
+    'Chris': { alt: 'Man standing on a bridge and smiling', link: 'https://read.cv/chrislew'},
+    'OMERS': { alt: 'Office Kitchen with fruits and snacks', link: 'https://www.omers.com/'},
+    'Imagine Communications.': { alt: 'Screenshot of Imagine Aviators software tool', link: 'https://imaginecommunications.com/make-tv/products/playout-and-channel-origination/imagine-aviator/'},
+    'puzzles.': {alt: 'A half finished puzzle', link: 'https://github.com/chrislkl/minigames'}
   };
 
   const handleMouseEnter = (word) => {
-    console.log('Hovered:', word);
+    //console.log('Hovered:', word);
     setHoveredWord(word);
     if (timeoutId) {
       clearTimeout(timeoutId);
@@ -44,7 +43,7 @@ function App() {
   };
 
   const handleMouseLeave = () => {
-    console.log('Left');
+    //console.log('Left');
     setShowImage(false);
     setHoveredWord(null);
     
@@ -55,50 +54,50 @@ function App() {
 
   const renderTextWithHover = (text) => {
     const words = text.split(' ');
-    let i = 0;
-    const elements = [];
+  let i = 0;
+  const elements = [];
 
-    while (i < words.length) {
-      const currentWord = words[i];
-      const nextWord = i + 1 < words.length ? words[i + 1] : '';
-      const twoWordsPhrase = `${currentWord} ${nextWord}`;
+  while (i < words.length) {
+    const currentWord = words[i];
+    const nextWord = i + 1 < words.length ? words[i + 1] : '';
+    const twoWordsPhrase = `${currentWord} ${nextWord}`;
+    
+    const phraseInfo = hoverablePhrases[twoWordsPhrase] || hoverablePhrases[currentWord];
 
-      if (hoverablePhrases[twoWordsPhrase]) {
-        elements.push(
-          <span
-            className="italic-word"
-            onMouseEnter={() => handleMouseEnter(twoWordsPhrase)}
-            onMouseLeave={handleMouseLeave}
-            key={i}
-          >
-            {twoWordsPhrase}
-          </span>
-        );
-        i += 2; 
-      } else if (hoverablePhrases[currentWord]) {
-        elements.push(
-          <span
-            className="italic-word"
-            onMouseEnter={() => handleMouseEnter(currentWord)}
-            onMouseLeave={handleMouseLeave}
-            key={i}
-          >
-            {currentWord}
-          </span>
-        );
-        i += 1;
-      } else {
-        elements.push(currentWord);
-        i += 1;
-      }
+    if (phraseInfo) {
+      const phrase = hoverablePhrases[twoWordsPhrase] ? twoWordsPhrase : currentWord;
+      const span = (
+        <span
+          className="italic-word"
+          onMouseEnter={() => handleMouseEnter(phrase)}
+          onMouseLeave={handleMouseLeave}
+          key={i}
+        >
+          {phrase}
+        </span>
+      );
 
-      if (i < words.length) {
-        elements.push(' '); 
-      }
+      elements.push(
+        phraseInfo.link ? (
+          <a href={phraseInfo.link} key={`link-${i}`} target="_blank" rel="noopener noreferrer">
+            {span}
+          </a>
+        ) : span
+      );
+
+      i += hoverablePhrases[twoWordsPhrase] ? 2 : 1;
+    } else {
+      elements.push(currentWord);
+      i += 1;
     }
 
-    return elements;
-  };
+    if (i < words.length) {
+      elements.push(' ');
+    }
+  }
+
+  return elements;
+};
 
   return (
     <Router>
@@ -113,7 +112,7 @@ function App() {
                   ))}
                   <div className="footer-bar">
                     <a href="mailto:christopher.lew916@gmail.com">Email</a>
-                    <a href="https://read.cv/chrislew" target="_blank">Read.cv</a>
+                    <a href="https://read.cv/chrislew" target="_blank">Portfolio</a>
                     <Link to="/journal">Things I've Learned</Link>
                     <Link to="/baking">Baking</Link>
                   </div>

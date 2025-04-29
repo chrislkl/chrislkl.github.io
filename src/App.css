@@ -2,7 +2,7 @@
 * {
   outline: 1px solid red; 
 }
-*/ /*remove to debug*/
+ /*remove to debug*/
 
 .App {
   text-align: center;
@@ -53,6 +53,12 @@
 .italic-word:hover {
   color: #d0d0d0; 
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .image-container {
   max-height: 100%;

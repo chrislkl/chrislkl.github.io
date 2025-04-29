@@ -1,11 +1,10 @@
 
 .journal-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column; 
     padding-left: 10%;
     padding-top: 10%;
-    /*height: 100vh; /* Make it stretch the full viewport height */
-    position: fixed; /* Keep it fixed on the left */
+    position: fixed; 
     width: 1000px;
     left: 0;
     top: 0;
@@ -32,11 +31,11 @@
 }
 
 .journal-link:hover {
-    color: #d0d0d0; /* Darker text color on hover */
+    color: #d0d0d0; 
 }
 
 .main-content {
-    margin-left: 320px; /* Leave space for the fixed journal container */
+    margin-left: 320px; 
     padding: 20px;
 }
 
@@ -46,14 +45,14 @@
 
 .return-button a {
   text-decoration: none;
-  color: white; /* Or any color you prefer */
+  color: white; 
 }
 
 .return-button a:hover {
-  color: #d0d0d0; /* Hover color */
+  color: #d0d0d0; 
 }
 
 .return-button .fa-arrow-left {
-  font-size: 24px; /* Adjust size as needed */
+  font-size: 24px;
 }
   

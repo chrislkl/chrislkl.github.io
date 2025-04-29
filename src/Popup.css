@@ -4,24 +4,24 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.5); 
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Ensure it appears above all other elements */
+    z-index: 1000; 
 }
 
 .popup-content {
     background-color: #1a2b4a;
     position: fixed;
-    top: 10%; /* Leave a small margin at the top */
-    left: 10%; /* Leave a small margin on the sides */
-    width: 75%; /* 90% of the screen width */
-    height: 80%; /* 90% of the screen height */
+    top: 10%; 
+    left: 10%; 
+    width: 75%; 
+    height: 80%; 
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensure it appears above other elements */
-    overflow-y: auto; /* Enable scrolling if content overflows */
+    z-index: 1000; 
+    overflow-y: auto; 
     padding-left: 2.5%;
     padding-right: 2.5%;
     font-family: 'Playfair Display', serif;
