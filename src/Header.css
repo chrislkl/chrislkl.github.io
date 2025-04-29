@@ -5,13 +5,13 @@
     align-items: center;
     height: 100vh;
     padding: 20px;
-    background-color: #1a2b4a; /* Optional: Add a background color */
+    background-color: #1a2b4a;
     box-sizing: border-box;
   }
 
   .header-left {
-    flex: 0.5; /* Allow this section to take up available space */
-    padding-left: 0px; /* Adjust the padding as needed */
+    flex: 0.5; 
+    padding-left: 0px; 
   }
   
   .header-left h1 {
@@ -23,12 +23,12 @@
   }
   
   .header-right {
-    flex-shrink: 0; /* Prevent the image from shrinking */
+    flex-shrink: 0; 
   }
 
   .header-right img {
-    max-width: 150px; /* Adjust size as needed */
-    border-radius: 50%; /* Optional: Make image circular */
+    max-width: 150px; 
+    border-radius: 50%; 
     object-fit: cover;
   }
   

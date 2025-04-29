@@ -7,6 +7,7 @@ import BakingPage from './BakingPage';
 import Journal from './Journal';
 import './BakingPage.css'; 
 import './Journal.css';
+import Header from './Header';
 
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
   const text = 'Chris is a software developer and baking enthusiast.\nHe loves to read books on theology and enjoys solving puzzles. Sometimes he walks in parks and talks to the local geese.';
   
   const images = {
-    Minecraft: '/root/chris-lew-website/src/test.jpg'
+    Chris: process.env.PUBLIC_URL + '/dab-emoji.png',
+    theology: process.env.PUBLIC_URL + '/dab-emoji.png',
+    'puzzles.': process.env.PUBLIC_URL + '/dab-emoji.png'
   };
 
   const hoverablePhrases = {
@@ -26,6 +29,7 @@ function App() {
   };
 
   const handleMouseEnter = (word) => {
+    console.log('Hovered:', word);
     setHoveredWord(word);
     if (timeoutId) {
       clearTimeout(timeoutId);
@@ -33,11 +37,12 @@ function App() {
 
     const id = setTimeout(() => {
       setShowImage(true); // Show image after delay
-    }, 5000); 
+    }, 100); 
     setTimeoutId(id);
   };
 
   const handleMouseLeave = () => {
+    console.log('Left');
     setShowImage(false);
     setHoveredWord(null);
     
@@ -99,13 +104,10 @@ function App() {
         <div className="App-header">
           <Routes>
             <Route path="/" element={
-              <>
+              <div className="intro-section">
                 <div className="text-container">
                   {text.split('\n').map((line, index) => (
-                    <p key={index}>
-                      {renderTextWithHover(line)}
-                      <br />
-                    </p>
+                    <p key={index}>{renderTextWithHover(line)}</p>
                   ))}
                   <div className="footer-bar">
                     <a href="mailto:christopher.lew916@gmail.com">Email</a>
@@ -119,7 +121,7 @@ function App() {
                     <img src={images[hoveredWord]} alt={hoveredWord} />
                   )}
                 </div>
-              </>
+              </div>
             } />
             <Route path="/baking" element={<BakingPage />} />
             <Route path="/journal" element={<Journal />} />

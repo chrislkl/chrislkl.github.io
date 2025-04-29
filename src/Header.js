@@ -8,7 +8,7 @@ function Header() {
         <h1>Christopher Lew</h1>
       </div>
       <div className="header-right">
-        <img src="/path-to-your-image.jpg" alt="Christopher Lew" />
+        <img src={process.env.PUBLIC_URL + '/dab-emoji.png'} alt="Christopher Lew" />
       </div>
     </div>
   );
