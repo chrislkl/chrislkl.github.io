@@ -14,17 +14,19 @@ function App() {
   const [hoveredWord, setHoveredWord] = useState(null);
   const [showImage, setShowImage] = useState(false);
   const [timeoutId, setTimeoutId] = useState(null); 
-  const text = 'Chris is a software developer and baking enthusiast.\nHe loves to read books on theology and enjoys solving puzzles. Sometimes he walks in parks and talks to the local geese.';
+  const text = 'Chris is a software developer and baking enthusiast.\nHe has built solutions as OMERS and Imagine Communications. He also loves to read books on theology and enjoys solving puzzles.';
   
   const images = {
-    Chris: process.env.PUBLIC_URL + '/dab-emoji.png',
-    theology: process.env.PUBLIC_URL + '/dab-emoji.png',
+    Chris: process.env.PUBLIC_URL + 'images/chris_eating.JPG',
+    OMERS: process.env.PUBLIC_URL + '/dab-emoji.png',
+    'Imagine Communications.': process.env.PUBLIC_URL + '/dab-emoji.png',
     'puzzles.': process.env.PUBLIC_URL + '/dab-emoji.png'
   };
 
   const hoverablePhrases = {
     'Chris': 'test',
-    'theology': 'test',
+    'OMERS': 'test',
+    'Imagine Communications.': 'test',
     'puzzles.': 'test'
   };
 
@@ -36,7 +38,7 @@ function App() {
     }
 
     const id = setTimeout(() => {
-      setShowImage(true); // Show image after delay
+      setShowImage(true); 
     }, 100); 
     setTimeoutId(id);
   };
@@ -117,6 +119,7 @@ function App() {
                   </div>
                 </div>
                 <div className="image-container">
+                  {!showImage && (<img src={process.env.PUBLIC_URL + 'images/christopher_lew_image.jpg'} alt={"Me"} />)}
                   {showImage && images[hoveredWord] && (
                     <img src={images[hoveredWord]} alt={hoveredWord} />
                   )}
