@@ -112,7 +112,7 @@ function App() {
                   ))}
                   <div className="footer-bar">
                     <a href="mailto:christopher.lew916@gmail.com">Email</a>
-                    <a href="https://read.cv/chrislew" target="_blank">Portfolio</a>
+                    <a href="https://read.cv/chrislew" target="_blank" rel="noopener noreferrer">Portfolio</a>
                     <Link to="/journal">Things I've Learned</Link>
                     <Link to="/baking">Baking</Link>
                   </div>
